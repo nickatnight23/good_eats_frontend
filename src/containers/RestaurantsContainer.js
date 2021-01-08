@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
+import {fetchRestaurant} from '../actions/restaurantActions'
 
-export default class RestaurantsContainer extends Component {
+ class RestaurantsContainer extends Component {
+
+    componentDidMount (){
+        this.props.fetchRestaurant()
+    }
     render() {
         return (
             <div>
@@ -9,3 +15,5 @@ export default class RestaurantsContainer extends Component {
         )
     }
 }
+
+export default connect(null,{fetchRestaurant})(RestaurantsContainer);
