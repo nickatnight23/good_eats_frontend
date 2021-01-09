@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import {fetchRestaurant} from '../actions/restaurantActions'
+import RestaurantList from '../components/RestaurantList'
 import RestaurantsForm from '../components/RestaurantsForm'
 
  class RestaurantsContainer extends Component {
@@ -13,6 +14,7 @@ import RestaurantsForm from '../components/RestaurantsForm'
             <div>
                Restaurant Container 
                <RestaurantsForm/>
+               <RestaurantList/>
             </div>
         )
     }
