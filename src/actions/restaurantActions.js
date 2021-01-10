@@ -12,7 +12,7 @@ export const addRestaurant = restaurant => {
     return (dispatch) => {
         fetch('http://localhost:3001/api/v1/restaurants',{
             method: 'Post',
-            body: JSON.stringify(restaurant),
+            body: FormData,
             headers:{'Content-Type':'application/json'}
         })
         .then(resp => resp.json())

@@ -14,7 +14,6 @@ import RestaurantsForm from '../components/RestaurantsForm'
             <div>
                Restaurant Container 
                <RestaurantsForm/>
-               <RestaurantList/>
             </div>
         )
     }

@@ -6,6 +6,7 @@ import RestaurantList from './RestaurantList'
 function App() {
   return (
     <div>
+      NAV LINK
       <RestaurantsContainer/>
       <Router/>
     </div>

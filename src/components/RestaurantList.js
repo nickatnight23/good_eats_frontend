@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-function RestaurantList({restaurants}) {
+function RestaurantList ({restaurants}) {
     return (
         <div>
             {restaurants.map(restaurant => <ul><li key={restaurant.id}>{restaurant.name} - {restaurant.description}-{restaurant.image_url} </li></ul>)}
@@ -11,7 +11,7 @@ function RestaurantList({restaurants}) {
 
 
 const mapStateToProps = state =>{
-    return{restaurants: state.restaurant}
+    return{restaurants: state.restaurants}
 }
 
 export default connect(mapStateToProps)(RestaurantList);
