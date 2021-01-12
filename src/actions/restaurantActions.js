@@ -4,18 +4,21 @@ export const fetchRestaurant = () =>{
     return (dispatch) => {
         fetch('http://localhost:3001/api/v1/restaurants')
         .then(resp => resp.json())
-        .then(restaurants => console.log({type: 'FETCH_RESTAURANTS', payload: restaurants}))
+        .then(restaurants =>dispatch({type: 'FETCH_RESTAURANTS', payload: restaurants}))
     }
 }
 
 export const addRestaurant = restaurant => {
+debugger
     return (dispatch) => {
+        debugger
         fetch('http://localhost:3001/api/v1/restaurants',{
-            method: 'Post',
-            body: FormData,
+        
+            method: 'POST',
+            body: JSON.stringify(restaurant),
             headers:{'Content-Type':'application/json'}
         })
         .then(resp => resp.json())
-        .then(restaurants => console.log({type: 'ADD_RESTAURANTS', payload: restaurants}))
+        .then(restaurant => dispatch({type: 'ADD_RESTAURANTS', payload: restaurant}))
     }
 }
