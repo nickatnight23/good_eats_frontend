@@ -1,11 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-function RestaurantList ({restaurants}) {
-
+function RestaurantList (props) {
+     
     return (
         <div>
-            {restaurants.map(restaurant => <ul><li key={restaurant.id}>{restaurant.name} - {restaurant.description}- {restaurant.city} - {restaurant.state}</li></ul>)}
+            {props.restaurants.map(restaurant => <ul><li key={restaurant.id}>{restaurant.name} - {restaurant.description}-</li></ul>)}
         </div>
     );
 }

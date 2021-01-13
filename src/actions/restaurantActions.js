@@ -4,14 +4,14 @@ export const fetchRestaurant = () =>{
     return (dispatch) => {
         fetch('http://localhost:3001/api/v1/restaurants')
         .then(resp => resp.json())
-        .then(restaurants =>dispatch({type: 'FETCH_RESTAURANTS', payload: restaurants}))
+        .then(restaurants =>{
+            dispatch({type: 'FETCH_RESTAURANTS', payload: restaurants})})
     }
 }
 
+
 export const addRestaurant = restaurant => {
-debugger
     return (dispatch) => {
-        debugger
         fetch('http://localhost:3001/api/v1/restaurants',{
         
             method: 'POST',
@@ -22,3 +22,16 @@ debugger
         .then(restaurant => dispatch({type: 'ADD_RESTAURANTS', payload: restaurant}))
     }
 }
+
+export const removeRestaurant = (id) => {
+    return (dispatch) => {
+        dispatch({type: REMOVING_RESTAURANT})
+        fetch(`http://localhost:3001/api/v1/restaurants/${id}`,{
+        
+            method: 'DELETE',
+            headers:{'Content-Type':'application/json'}
+        })
+        .then(() => dispatch({type: 'RESTAURANT_REMOVED', payload: id}))
+    }
+}
+
