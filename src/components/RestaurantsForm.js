@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {addRestaurant} from '../actions/restaurantActions'
 import  {connect} from 'react-redux'
+import {removeRestaurant} from '../actions/restaurantActions'
 
  class RestaurantsForm extends Component {
 
@@ -24,7 +25,7 @@ import  {connect} from 'react-redux'
     }
     handleClick = e => {
         e.preventDefault()
-        this.props.removeRestaurant(event.target.id)
+        this.state.removeRestaurant(e.target.id)
     }
    
     render() {
@@ -39,6 +40,7 @@ import  {connect} from 'react-redux'
                    <br/>
                     <input type= 'submit'value ="Add Restaurant"/>
                     </form> 
+                    {/* <button id={restaurant.id} onClick={this.handleClick}>X</button> */}
                       
             </div>
         )
