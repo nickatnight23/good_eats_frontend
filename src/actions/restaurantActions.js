@@ -25,13 +25,13 @@ export const addRestaurant = restaurant => {
 
 export const removeRestaurant = (id) => {
     return (dispatch) => {
-        dispatch({type: REMOVING_RESTAURANT})
+        dispatch({type: "REMOVING_RESTAURANT"})
         fetch(`http://localhost:3001/api/v1/restaurants/${id}`,{
         
             method: 'DELETE',
             headers:{'Content-Type':'application/json'}
         })
-        .then(() => dispatch({type: 'RESTAURANT_REMOVED', payload: id}))
+        .then(() => dispatch({type: 'REMOVE_RESTAURANT', payload: id}))
     }
 }
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {addRestaurant} from '../actions/restaurantActions'
 import  {connect} from 'react-redux'
-import {removeRestaurant} from '../actions/restaurantActions'
+
 
  class RestaurantsForm extends Component {
 
@@ -23,15 +23,14 @@ import {removeRestaurant} from '../actions/restaurantActions'
         this.props.addRestaurant(this.state)
 
     }
-    handleClick = e => {
-        e.preventDefault()
-        this.state.removeRestaurant(e.target.id)
-    }
+   
    
     render() {
         return (
             <div>
+                 
                <form onSubmit={this.handleSubmit}>
+                <b><p></p></b> 
                    <label>Name:</label>
                    <input type= 'text' value={this.state.name} onChange={this.handleChange} name = "name"/>
                    <br/>
@@ -40,12 +39,12 @@ import {removeRestaurant} from '../actions/restaurantActions'
                    <br/>
                     <input type= 'submit'value ="Add Restaurant"/>
                     </form> 
-                    {/* <button id={restaurant.id} onClick={this.handleClick}>X</button> */}
+                  
                       
             </div>
         )
     }
 }
 
-export default connect(null,{addRestaurant,removeRestaurant}) (RestaurantsForm);
+export default connect(null,{addRestaurant}) (RestaurantsForm);
 
