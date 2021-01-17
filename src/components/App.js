@@ -7,7 +7,8 @@ import Navigate from '../components/Navigate'
 import Home from '../components/Home'
 import RestaurantsForm from './RestaurantsForm'
 import RestaurantList from './RestaurantList'
-import RestaurantsContainer from '../containers/RestaurantsContainer'
+
+// import RestaurantsContainer from '../containers/RestaurantsContainer'
 // import southpark from './southpark.gif';
 // import {connect} from 'react-redux'
 
@@ -25,7 +26,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path ="/RestaurantForm" component ={RestaurantsForm}/>
-            <Route exact path ="/ RestaurantContainer" component ={RestaurantsContainer}/>
+            <Route exact path ="/Restaurant" component ={RestaurantList}/>
             {/* <img src={southpark} alt="southpark" height={900} width={1200}/> */}
           </Switch>
          

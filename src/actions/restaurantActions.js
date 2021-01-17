@@ -1,6 +1,7 @@
 // create an action that is going to fetch restaurants from my api
 
 export const fetchRestaurant = () =>{
+    debugger
     return (dispatch) => {
         fetch('http://localhost:3001/api/v1/restaurants')
         .then(resp => resp.json())
@@ -11,6 +12,7 @@ export const fetchRestaurant = () =>{
 
 
 export const addRestaurant = restaurant => {
+    debugger
     return (dispatch) => {
         fetch('http://localhost:3001/api/v1/restaurants',{
         

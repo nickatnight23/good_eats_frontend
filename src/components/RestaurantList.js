@@ -1,32 +1,37 @@
-import React from 'react'
+import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {removeRestaurant} from '../actions/restaurantActions'
+import { fetchRestaurant,removeRestaurant } from '../actions/restaurantActions'
+import {Link} from 'react-router'
 
-
-
-
-function RestaurantList (props) {
-    // debugger
-   const handleClick = e => {
-        e.preventDefault()
-        // debugger
-        props.removeRestaurant(e.target.id)
+class RestaurantList extends Component  {
+    componentDidMount () {
+        this.props.fetchRestaurant(this.props.restaurant.id)
     }
-     
-    return (
-    
+
+    handleClick = e => {
+          e.preventDefault()
+          this.props.removeRestaurant(e.target.id)
+    }
+    render(){
+      debugger
+      return(
         <div>
-        
-            {props.restaurants.map(restaurant => <ul><li key={restaurant.id}>{restaurant.name} - {restaurant.description}- <button id = {restaurant.id} class = ' ui button' onClick={handleClick}>Remove</button> </li></ul>)}
-            {/* <button class="ui button">Click Here</button> */}
+          {this.props.restaurants.map(restaurant => <ul><li key={restaurant.id}>{restaurant.name} - {restaurant.description}- <button id = {restaurant.id} class = ' ui button' onClick ={this.handleClick}>Remove</button> </li></ul>)}
+          {/* <button class="ui button">Click Here</button> */}
         </div>
-    );
+      );
+    }
+}
+
+const mapStateToProps = state => {   
+  debugger 
+  return {
+  restaurants: state.restaurants.restaurants,
+  loading: state.restaurants.loading         
+  }
 }
 
 
-const mapStateToProps = state =>{
-    // debugger
-    return{restaurants: state.restaurants.restaurants}
-}
+    
 
-export default connect(mapStateToProps,{removeRestaurant})(RestaurantList);
+export default connect(null,mapStateToProps,{fetchRestaurant,removeRestaurant})(RestaurantList);

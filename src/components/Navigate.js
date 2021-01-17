@@ -30,13 +30,13 @@ const Navigate = () => {
             > Restuaurant Form
             </NavLink>
             <NavLink
-                to="/RestaurantContainer"
+                to="/RestaurantList"
                 exact
                 style={links}
                 activeStyle={{
                     background: 'blue'
                 }}
-            > Restuaurant RestaurantList
+            > Restuaurant
             </NavLink>
         </div>
     )
