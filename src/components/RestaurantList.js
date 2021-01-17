@@ -5,7 +5,7 @@ import {Link} from 'react-router'
 
 class RestaurantList extends Component  {
     componentDidMount () {
-        this.props.fetchRestaurant(this.props.restaurant.id)
+        this.props.fetchRestaurant()
     }
 
     handleClick = e => {
@@ -13,7 +13,7 @@ class RestaurantList extends Component  {
           this.props.removeRestaurant(e.target.id)
     }
     render(){
-      debugger
+
       return(
         <div>
           {this.props.restaurants.map(restaurant => <ul><li key={restaurant.id}>{restaurant.name} - {restaurant.description}- <button id = {restaurant.id} class = ' ui button' onClick ={this.handleClick}>Remove</button> </li></ul>)}
@@ -24,7 +24,7 @@ class RestaurantList extends Component  {
 }
 
 const mapStateToProps = state => {   
-  debugger 
+
   return {
   restaurants: state.restaurants.restaurants,
   loading: state.restaurants.loading         
@@ -34,4 +34,4 @@ const mapStateToProps = state => {
 
     
 
-export default connect(null,mapStateToProps,{fetchRestaurant,removeRestaurant})(RestaurantList);
+export default connect(mapStateToProps,{fetchRestaurant,removeRestaurant})(RestaurantList);

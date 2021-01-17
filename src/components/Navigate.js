@@ -1,9 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 const links = {
-    width: '100px',
-    padding: '12px',
-    margin: '0 6px 6px',
+    width: '200px',
+    padding: '25px',
+    margin: '0 5px 5px',
     background: 'blue',
     textDecoration: 'none',
     color: "white"
@@ -11,6 +11,7 @@ const links = {
 const Navigate = () => {
     return (
         <div>
+            <div class="ui column centered grid">
             <NavLink
                 to="/"
                 exact
@@ -36,8 +37,28 @@ const Navigate = () => {
                 activeStyle={{
                     background: 'blue'
                 }}
-            > Restuaurant
+            > RestaurantList
             </NavLink>
+            <NavLink
+                to="/About"
+                exact
+                style={links}
+                activeStyle={{
+                    background: 'blue'
+                }}
+            > About
+            </NavLink>
+            <NavLink
+                to="/Contact"
+                exact
+                style={links}
+                activeStyle={{
+                    background: 'blue'
+                }}
+            > Contact
+            </NavLink>
+            <b><p></p></b> 
+        </div>
         </div>
     )
 
