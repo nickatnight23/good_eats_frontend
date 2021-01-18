@@ -4,7 +4,7 @@ const links = {
     width: '200px',
     padding: '25px',
     margin: '0 5px 5px',
-    background: 'blue',
+    background: 'grey',
     textDecoration: 'none',
     color: "white"
 }
@@ -17,7 +17,7 @@ const Navigate = () => {
                 exact
                 style={links}
                 activeStyle={{
-                    background: 'green'
+                    background: ' grey'
                 }}
             > Home
             </NavLink>
@@ -26,7 +26,7 @@ const Navigate = () => {
                 exact
                 style={links}
                 activeStyle={{
-                    background: 'blue'
+                    background: 'grey'
                 }}
             > Restuaurant Form
             </NavLink>
@@ -35,7 +35,7 @@ const Navigate = () => {
                 exact
                 style={links}
                 activeStyle={{
-                    background: 'blue'
+                    background: 'grey'
                 }}
             > RestaurantList
             </NavLink>
@@ -44,7 +44,7 @@ const Navigate = () => {
                 exact
                 style={links}
                 activeStyle={{
-                    background: 'blue'
+                    background: 'grey'
                 }}
             > About
             </NavLink>
@@ -53,7 +53,7 @@ const Navigate = () => {
                 exact
                 style={links}
                 activeStyle={{
-                    background: 'blue'
+                    background: 'grey'
                 }}
             > Contact
             </NavLink>

@@ -31,6 +31,7 @@ import  {connect} from 'react-redux'
         this.setState({name:'', description:''})
         e.preventDefault()
         this.props.addRestaurant(this.state)
+        this.props.history.push('./RestaurantList')
 
     }
    
@@ -56,10 +57,10 @@ import  {connect} from 'react-redux'
                      <b><p></p></b>
                    <br/>
                    <button class="ui red button">Add Restaurant</button>
-                
+
                     </form> 
                   
-                      
+              
             </div>
         )
     }

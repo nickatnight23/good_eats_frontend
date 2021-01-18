@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import { fetchRestaurant,removeRestaurant } from '../actions/restaurantActions'
-import {Link} from 'react-router'
+// import {Link} from 'react-router'
 
 class RestaurantList extends Component  {
     componentDidMount () {

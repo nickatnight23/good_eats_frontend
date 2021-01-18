@@ -19,22 +19,22 @@ const Footer = () => {
                     </div>
                     {/* Column 2 */}
                     <div className="col">
-                        <h4>STUFF</h4>
+                        <h4>Careers</h4>
                         <ul className="list-unstyled">
-                            <li>Great Food</li>
-                            <li>Other Stuff</li>
-                            <li>Good Stuff</li>
+                            <li>Employee Perks</li>
+                            <li>Working with us</li>
+                            <li>Apply Now</li>
 
                         </ul>
 
                     </div>
                     {/* Column 3 */}
                     <div className="col">
-                        <h4>Another Column</h4>
+                        <h4>About Us</h4>
                         <ul className="list-unstyled">
-                            <li>Great Food</li>
-                            <li>Other Stuff</li>
-                            <li>Good Stuff</li>
+                            <li>Donations</li>
+                            <li>Community</li>
+                            <li>Employment</li>
 
                         </ul>
 
