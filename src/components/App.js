@@ -11,6 +11,8 @@ import About from './About'
 import Footer from './Footer'
 import './App.css'
 import Contact from './Contact'
+import { fetchRestaurant} from '../actions/restaurantActions'
+import {connect} from 'react-redux'
 
 // import RestaurantsContainer from '../containers/RestaurantsContainer'
 // import southpark from './southpark.gif';
@@ -20,6 +22,11 @@ import Contact from './Contact'
 
 
 class App extends React.Component {
+
+  componentDidMount () {
+    this.props.fetchRestaurant()
+}
+
   render(){
     
     return (
@@ -50,4 +57,4 @@ class App extends React.Component {
   
 }
 
-export default App;
+export default connect(null,{fetchRestaurant})(App)
