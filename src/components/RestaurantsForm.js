@@ -24,6 +24,10 @@ import  {connect} from 'react-redux'
     handleChange = (event) => {
         // debugger 
         this.setState({
+            //for interpolation
+            // this is to dynamically update object property
+            // you could have multiple react inputs having a different name property
+            // And using the same onChange handler to update part of the state
             [event.target.name]: event.target.value
         })
     }
@@ -31,6 +35,7 @@ import  {connect} from 'react-redux'
         this.setState({name:'', description:''})
         e.preventDefault()
         this.props.addRestaurant(this.state)
+        // redirect user to this url
         this.props.history.push('./RestaurantList')
 
     }
@@ -67,4 +72,4 @@ import  {connect} from 'react-redux'
 }
 
 export default connect(null,{addRestaurant}) (RestaurantsForm);
-
+// null means not subscribed to the stores updates

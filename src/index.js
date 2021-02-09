@@ -12,7 +12,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   rootReducer, composeEnhancers(applyMiddleware(thunk))
 )
-
+// the provider makes redux store availalable to any components that have been wrapped in the connect()
 ReactDOM.render(
   <Provider store = {store}>
   

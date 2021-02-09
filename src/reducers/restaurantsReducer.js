@@ -4,7 +4,7 @@ export const restaurantsReducer = (state = {restaurants: [], loading: false}, ac
         return {...state, loading: true}
         case ('FETCH_RESTAURANTS'):
             return {...state, loading: false, restaurants: action.payload}
-            case("ADDING_RESTAURANT"):
+        case("ADDING_RESTAURANT"):
             return {...state, loading: true}
         case 'ADD_RESTAURANTS':
                 return{...state, loading: false,restaurants: [...state.restaurants, action.payload]}
@@ -20,3 +20,5 @@ export const restaurantsReducer = (state = {restaurants: [], loading: false}, ac
             return state   
     }
 }
+
+//the root reducer function is called with the current state and the dispatched action
