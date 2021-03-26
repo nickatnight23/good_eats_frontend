@@ -16,7 +16,7 @@ class RestaurantList extends Component  {
     render(){
 
       return(
-        <div>
+        <div class="container">
           {this.props.restaurants.map(restaurant =>  <ul><li key={restaurant.id}>{restaurant.name} - {restaurant.description}- <button id = {restaurant.id} class = ' ui button' onClick ={this.handleClick}>Remove</button> </li>< LikeButton /></ul>)}
           {/* <button class="ui button">Click Here</button> */}
         </div>
