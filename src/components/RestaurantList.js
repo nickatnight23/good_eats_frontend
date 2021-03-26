@@ -2,7 +2,8 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import { fetchRestaurant,removeRestaurant } from '../actions/restaurantActions'
 import LikeButton from './LikeButton'
-// import {Link} from 'react-router'
+import './App.css'
+// import {Link} from 'reactrouter'
 
 class RestaurantList extends Component  {
   

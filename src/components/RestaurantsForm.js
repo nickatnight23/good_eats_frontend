@@ -2,14 +2,6 @@ import React, { Component } from 'react'
 import {addRestaurant} from '../actions/restaurantActions'
 import  {connect} from 'react-redux'
 
-// const styling = {
-//     width: '200px',
-//     padding: '10px',
-//     margin: '0 8px 8px',
-//     background: 'blue',
-//     textDecoration: 'none',
-//     color: "white"
-// }
 
 
 
@@ -44,7 +36,7 @@ import  {connect} from 'react-redux'
     render() {
         return (
             
-            <div class ="ui container">
+            <div class ="container">
     
                <form onSubmit={this.handleSubmit}>
                     
